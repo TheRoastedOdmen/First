@@ -1,6 +1,7 @@
 print('Half adder logic gate')
 print('Enter 2 source states. Values >1 will return 1; values <0 will return 0\n')
 
+#input module
 a = int(input('Enter the first state: '))
 b = int(input('Enter the second state: '))
 
