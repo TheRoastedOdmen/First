@@ -1,4 +1,4 @@
-print ('10 numbers sorter')
+print ('10 float numbers sorter')
 
 x0 = float(input ('1: '))
 x1 = float(input ('2: '))
