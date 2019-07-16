@@ -1,24 +1,40 @@
 print('\n                                    ########################################')
 print('                                    ### S I M P L E  C A L C U L A T O R ###')
 print('                                    ########################################\n')
-x = float(input ('Enter x: '))
-print(x,'\n#########')
-y = float(input ('Enter y: '))
-print(y,'\n#########')
 
-print ('\nAddition:', x + y)
+while True:
+    print("Options: ")
+    print("Enter '+' to add two numbers")
+    print("Enter '-' to substract two numbers")
+    print("Enter '*' to multiply two numbers")
+    print("Enter '/' to divide two numbers")
+    print("Enter 'exit' to quit the program")
+    a = input("\nChoose an option: ")
 
-print ('\nSubstraction:', x - y)
-
-print ('\nMultiplication:', x*y)
-
-print ('\nDivision:', x/y)
-
-print ('(Persentage):', (x/y)*100, '%')
-
-x = int(x)
-y = int(y)
-
-print ('\n\nBinary int(x):', bin(x)[2:])
-
-print ('\nBinary int(y):', bin(y)[2:])
+    if a == "exit":
+        break
+    elif a == "+":
+        print("\nAddition\n")
+        x = float(input("Enter a number: "))
+        y = float(input("Enter an another number: "))
+        z = str(x + y)
+        print("The answer is: " + z,'\n')
+    elif a == "-":
+        print("\nSubstraction\n")
+        x = float(input("Enter a number: "))
+        y = float(input("Enter an another number: "))
+        z = str(x - y)
+        print("\nThe answer is: " + z,'\n')
+    elif a == "*":
+        print("\nMultiplication\n")
+        x = float(input("Enter a number: "))
+        y = float(input("Enter an another number: "))
+        z = str(x * y)
+        print("\nThe answer is: " + z,'\n')
+    elif a == "/":
+        print("\nDivision\n")
+        x = float(input("Enter a number: "))
+        y = float(input("Enter an another number: "))
+        z = str(x / y)
+        print("\nThe answer is: " + z,'\n')
+    else: print("\nUnknown input\n")
