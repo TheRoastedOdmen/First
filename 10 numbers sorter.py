@@ -17,7 +17,7 @@ def sorter(list):
             if list[i] > list[i+1]:
                 list[i], list[i+1] = list[i+1], list[i]
 
-list = [x0,x1,x2,x3,x4,x5,x6,x7,x8,x9]
-sorter(list)
+a = [x0,x1,x2,x3,x4,x5,x6,x7,x8,x9]
+sorter(a)
 
-print(list)
+print(a)
