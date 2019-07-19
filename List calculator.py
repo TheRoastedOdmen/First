@@ -8,7 +8,7 @@ print('Finally press enter to get the result\n')
 input('Press enter to continue')
 
 while True:
-    print("Options: ")
+    print("\nOptions: ")
     print("Input '+' to add numbers")
     print("Input '-' to substract numbers")
     print("Input '*' to multiply numbers")
