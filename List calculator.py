@@ -1,4 +1,4 @@
-import time
+from time import sleep
 import math
 #import numpy
 
@@ -21,7 +21,7 @@ while True:
     print("Input '**' to exponentiation of a list of numbers")
     print("Input 'y/x to divide 1 number to a list of numbers (also %)")
     print("Input 'x/y to divide a list of number to a 1 number (also %)")
-    print("Input 'n!' to factorial the numbers")
+    print("Input '!' to factorial the numbers")
     print("\nInput 'exit' to quit the program")
 
     a = str(input("\nChoose an option: "))
@@ -58,12 +58,13 @@ while True:
         print(u1, sum(y), '\n')
         print('+' * (len(u1) + len(str(sum(y))) + 2))
 
-        time.sleep(1)
+        sleep(1)
 
     elif a == '-':
         print('\nYou have choosen the Substraction\n')
         x = float(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
+
         while True:
             try:
                 n += 1
@@ -84,12 +85,13 @@ while True:
         print('\nSubstraction result:', sum(y), '\n')
         print('-' * (len(str('Substraction result: ')) + len(str(sum(y)))))
 
-        time.sleep(1)
+        sleep(1)
 
     elif a == '*':
         print('\nYou have choosen the Multiplication\n')
         x = float(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
+
         while True:
             try:
                 n += 1
@@ -117,12 +119,13 @@ while True:
         print('\nMultiplication result:', multi(y), '\n')
         print('x' * (len(str('Multiplication result: ')) + len(str(multi(y)))))
 
-        time.sleep(1)
+        sleep(1)
 
     elif a == '/':
         print('\nYou have choosen the Division\n')
         x = float(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
+
         while True:
             try:
                 n += 1
@@ -153,12 +156,13 @@ while True:
         print('\nDivision result:', div(y), '\n')
         print('/' * (len(str('Division result: ')) + len(str(div(y)))))
 
-        time.sleep(1)
+        sleep(1)
 
     elif a == '**':
         print('\nYou have choosen the Exponentiation\n')
         x = float(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
+
         while True:
             try:
                 n += 1
@@ -188,7 +192,7 @@ while True:
         print('\nExponentiation result:', y2, '\n')
         print('^' * (len(str('Exponentiation result: ')) + len(str(y2))))
 
-        time.sleep(1)
+        sleep(1)
 
     elif a == 'y/x':
         print('\nYou have choosen the y/x\n')
@@ -196,6 +200,7 @@ while True:
         print('Main number (y): ', z)
         x = float(input('Enter the number (x): '))
         print(str(n) + 'st number (x): ',x)
+
         while True:
             try:
                 n += 1
@@ -233,12 +238,13 @@ while True:
         print('\ny/x % result:', y3, '\n')
         print('%' * (len(str('y/x % result:  ')) + len(str(y3))))
 
-        time.sleep(1)
+        sleep(1)
 
     elif a == 'x/y':
         print('\nYou have choosen the x/y\n')
         x = float(input('Enter the number (x): '))
         print(str(n) + 'st number (x): ',x)
+
         while True:
             try:
                 n += 1
@@ -279,12 +285,13 @@ while True:
         print('\nx/y % result:', y3, '\n')
         print('%' * (len(str('x/y % result:  ')) + len(str(y3))))
 
-        time.sleep(1)
+        sleep(1)
 
-    elif a == 'n!':
+    elif a == '!':
         print('\nYou have choosen the Factorial\n')
         x = int(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
+
         while True:
             try:
                 n += 1
@@ -310,7 +317,7 @@ while True:
         print('!' * (len(str('Factorial result: ')) + len(str(y2))))
         print('\nFactorial result:', y2, '\n')
         print('!' * (len(str('Factorial result: ')) + len(str(y2))))
-        time.sleep(1)
+        sleep(1)
 
     else:
         q = 'Unknown input'
@@ -319,7 +326,7 @@ while True:
         print(q)
         print('?' * (len(str(q))))
 
-        time.sleep(1)
+        sleep(1)
 
 #TODO:
 #Calculation
