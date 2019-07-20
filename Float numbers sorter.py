@@ -9,9 +9,10 @@ while True:
     if a == 'exit':
         break
     else:
-        #Implementation of the sort() function
+
         x = [float(i) for i in input('Enter the numbers via space ').split()]
 
+        #Implementation of the sort() function
         def sorter(list):
             for num in range(len(list) -1,0,-1):
                 for i in range(num):
