@@ -3,13 +3,9 @@ print('!Module Helper!')
 
 print(help('modules'))
 
-a = str(input('Enter module name (or exit to quit): '))
+a = str(input('Enter module name: '))
 
-
-if a == 'exit':
-    break
-
-elif a == 'math':
+if a == 'math':
     print(help('math'))
 
 elif a == 'time':
