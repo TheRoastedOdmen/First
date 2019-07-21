@@ -16,9 +16,9 @@ while True:
     print("\n__________OPTIONS___________ \n")
     print("Input '+' to add the numbers")
     print("Input '-' to substract the numbers")
-    print("Input '*' to multiply the numbers")
+    print("Input '*' or 'x' to multiply the numbers")
     print("Input '/' to divide the numbers")
-    print("Input '**' to exponentiation of a list of numbers")
+    print("Input '**' or '^' to exponentiation of a list of numbers")
     print("Input 'y/x to divide 1 number to a list of numbers (also %)")
     print("Input 'x/y to divide a list of number to a 1 number (also %)")
     print("Input '!' to factorial the numbers")
@@ -80,14 +80,16 @@ while True:
                     print(str(n) + 'th number:-->',x*-1)
             except:
                 break
+
+        u1 = 'Substraction result: '
         print()
-        print('-' * (len(str('Substraction result: ')) + len(str(sum(y)))))
-        print('\nSubstraction result:', sum(y), '\n')
-        print('-' * (len(str('Substraction result: ')) + len(str(sum(y)))))
+        print('-' * (len(u1) + len(str(sum(y))) + 2), '\n')
+        print(u1, sum(y), '\n')
+        print('-' * (len(u1) + len(str(sum(y))) + 2))
 
         sleep(1)
 
-    elif a == '*':
+    elif a == '*' or a == 'x':
         print('\nYou have choosen the Multiplication\n')
         x = float(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
@@ -114,10 +116,11 @@ while True:
                 res = res * x
             return res
 
+        u1 = 'Multiplication result: '
         print()
-        print('x' * (len(str('Multiplication result: ')) + len(str(multi(y)))))
-        print('\nMultiplication result:', multi(y), '\n')
-        print('x' * (len(str('Multiplication result: ')) + len(str(multi(y)))))
+        print('x' * (len(u1) + len(str(multi(y))) + 2), '\n')
+        print(u1, multi(y), '\n')
+        print('x' * (len(u1) + len(str(multi(y))) + 2))
 
         sleep(1)
 
@@ -151,14 +154,15 @@ while True:
                 res = res * x
             return res
 
+        u1 = 'Division result: '
         print()
-        print('/' * (len(str('Division result: ')) + len(str(div(y)))))
-        print('\nDivision result:', div(y), '\n')
-        print('/' * (len(str('Division result: ')) + len(str(div(y)))))
+        print('/' * (len(u1) + len(str(div(y))) + 2), '\n')
+        print(u1, div(y), '\n')
+        print('/' * (len(u1) + len(str(div(y))) + 2))
 
         sleep(1)
 
-    elif a == '**':
+    elif a == '**' or a == '^':
         print('\nYou have choosen the Exponentiation\n')
         x = float(input('Enter the number: '))
         print(str(n) + 'st number:-->',x)
@@ -187,10 +191,11 @@ while True:
             res = x**v
             y2.append(res)
 
+        u1 = 'Exponentiation result: '
         print()
-        print('^' * (len(str('Exponentiation result: ')) + len(str(y2))))
-        print('\nExponentiation result:', y2, '\n')
-        print('^' * (len(str('Exponentiation result: ')) + len(str(y2))))
+        print('^' * (len(u1) + len(str(y2)) + 2), '\n')
+        print(u1, y2, '\n')
+        print('^' * (len(u1) + len(str(y2)) + 2))
 
         sleep(1)
 
@@ -222,10 +227,11 @@ while True:
             res = z/x
             y2.append(res)
 
+        u1 = 'y/x result: '
         print()
-        print('/' * (len(str('y/x result: ')) + len(str(y2))))
-        print('\ny/x result:', y2, '\n')
-        print('/' * (len(str('y/x result: ')) + len(str(y2))))
+        print('^' * (len(u1) + len(str(y2)) + 2), '\n')
+        print(u1, y2, '\n')
+        print('^' * (len(u1) + len(str(y2)) + 2))
 
         y3 = []
         for res in y2:
@@ -332,6 +338,7 @@ while True:
 #Calculation
 #modules
 #division by zero
+#don't forget symbols formulas (x/y % and further)
 
 
 
