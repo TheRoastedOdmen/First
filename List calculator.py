@@ -341,10 +341,9 @@ while True:
         sleep(1)
 
 #TODO:
-#Calculation
-#modules
+#Calculation progress
+#npy module
 #division by zero
-#don't forget symbols formulas (x/y % and further)
 
 
 
