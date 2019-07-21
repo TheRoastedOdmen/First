@@ -193,9 +193,9 @@ while True:
 
         u1 = 'Exponentiation result: '
         print()
-        print('^' * (len(u1) + len(str(y2)) + 2), '\n')
+        print('^' * (len(u1) + len(str(y2)) + 1), '\n')
         print(u1, y2, '\n')
-        print('^' * (len(u1) + len(str(y2)) + 2))
+        print('^' * (len(u1) + len(str(y2)) + 1))
 
         sleep(1)
 
@@ -229,9 +229,9 @@ while True:
 
         u1 = 'y/x result: '
         print()
-        print('^' * (len(u1) + len(str(y2)) + 2), '\n')
+        print('/' * (len(u1) + len(str(y2)) + 1), '\n')
         print(u1, y2, '\n')
-        print('^' * (len(u1) + len(str(y2)) + 2))
+        print('/' * (len(u1) + len(str(y2)) + 1))
 
         y3 = []
         for res in y2:
@@ -239,10 +239,11 @@ while True:
             res2 = str(res1) + '%'
             y3.append(res2)
 
+        u2 ='y/x % result: '
         print()
-        print('%' * (len(str('y/x % result:  ')) + len(str(y3))))
-        print('\ny/x % result:', y3, '\n')
-        print('%' * (len(str('y/x % result:  ')) + len(str(y3))))
+        print('%' * (len(u2) + len(str(y3)) +1), '\n')
+        print(u2, y3, '\n')
+        print('%' * (len(u2) + len(str(y3)) +1))
 
         sleep(1)
 
@@ -275,10 +276,11 @@ while True:
             res = x/z1
             y2.append(res)
 
+        u1 = 'x/y result: '
         print()
-        print('/' * (len(str('x/y result: ')) + len(str(y2))))
-        print('\nx/y result:', y2, '\n')
-        print('/' * (len(str('x/y result: ')) + len(str(y2))))
+        print('/' * (len(u1) + len(str(y2)) + 1), '\n')
+        print(u1, y2, '\n')
+        print('/' * (len(u1) + len(str(y2)) + 1))
 
         y3 = []
         for res in y2:
@@ -286,10 +288,11 @@ while True:
             res2 = str(res1) + '%'
             y3.append(res2)
 
+        u2 ='x/y % result: '
         print()
-        print('%' * (len(str('x/y % result:  ')) + len(str(y3))))
-        print('\nx/y % result:', y3, '\n')
-        print('%' * (len(str('x/y % result:  ')) + len(str(y3))))
+        print('%' * (len(u2) + len(str(y3)) +1), '\n')
+        print(u2, y3, '\n')
+        print('%' * (len(u2) + len(str(y3)) +1))
 
         sleep(1)
 
@@ -319,10 +322,13 @@ while True:
             res = math.factorial(x)
             y2.append(res)
 
+        u1 = 'Factorial result: '
         print()
-        print('!' * (len(str('Factorial result: ')) + len(str(y2))))
-        print('\nFactorial result:', y2, '\n')
-        print('!' * (len(str('Factorial result: ')) + len(str(y2))))
+        print('!' * (len(u1) + len(str(y2)) + 1), '\n')
+        print(u1, y2, '\n')
+        print('!' * (len(u1) + len(str(y2)) + 1))
+
+
         sleep(1)
 
     else:
