@@ -10,7 +10,6 @@ print('#' * ((len(str(u))) - 2))
 print('\nFirstly choose an option')
 print('Then input the numbers via enter')
 print('When you done inputting press enter to get the result\n')
-input('Press enter to continue')
 
 while True:
     print("\n__________OPTIONS___________ \n")
@@ -22,6 +21,7 @@ while True:
     print("Input 'y/x to divide 1 number to a list of numbers (also %)")
     print("Input 'x/y to divide a list of number to a 1 number (also %)")
     print("Input '!' to factorial the numbers")
+    print("Input 'openlast' to see the last result")
     print("\nInput 'exit' to quit the program")
 
     a = str(input("\nChoose an option: "))
@@ -59,9 +59,11 @@ while True:
         print('+' * (len(u1) + len(str(sum(y))) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('+')
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(sum(y)))
+        file.write('\n\n+')
         file.close()
 
         sleep(1)
@@ -94,9 +96,11 @@ while True:
         print('-' * (len(u1) + len(str(sum(y))) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('-' * (len(u1) + len(str(sum(y))) - 8))
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(sum(y)))
+        file.write('\n\n-')
         file.close()
 
         sleep(1)
@@ -135,9 +139,11 @@ while True:
         print('x' * (len(u1) + len(str(multi(y))) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('x')
+        file.write('\n\nLast ')
         file.write(str(u1))
-        file.write(str(multy(y)))
+        file.write(str(multi(y)))
+        file.write('\n\nx')
         file.close()
 
         sleep(1)
@@ -179,9 +185,11 @@ while True:
         print('/' * (len(u1) + len(str(div(y))) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('/')
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(div(y)))
+        file.write('\n\n/')
         file.close()
 
         sleep(1)
@@ -222,9 +230,11 @@ while True:
         print('^' * (len(u1) + len(str(y2)) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('^')
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(y2))
+        file.write('\n\n^')
         file.close()
 
         sleep(1)
@@ -264,10 +274,11 @@ while True:
         print('/' * (len(u1) + len(str(y2)) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('//')
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(y2))
-        file.close()
+        file.write('\n\n//')
 
         y3 = []
         for res in y2:
@@ -281,10 +292,11 @@ while True:
         print(u2, y3, '\n')
         print('%' * (len(u2) + len(str(y3)) +1))
 
-        file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('\n\n\n%')
+        file.write('\n\nLast ')
         file.write(str(u2))
         file.write(str(y3))
+        file.write('\n\n%')
         file.close()
 
         sleep(1)
@@ -325,10 +337,11 @@ while True:
         print('/' * (len(u1) + len(str(y2)) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('//')
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(y2))
-        file.close()
+        file.write('\n\n//')
 
         y3 = []
         for res in y2:
@@ -342,10 +355,11 @@ while True:
         print(u2, y3, '\n')
         print('%' * (len(u2) + len(str(y3)) +1))
 
-        file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('\n\n\n%')
+        file.write('\n\nLast ')
         file.write(str(u2))
         file.write(str(y3))
+        file.write('\n\n%')
         file.close()
 
         sleep(1)
@@ -383,9 +397,19 @@ while True:
         print('!' * (len(u1) + len(str(y2)) + 1))
 
         file = open('last_calculator_result.txt', "w")
-        file.write('Last ')
+        file.write('!')
+        file.write('\n\nLast ')
         file.write(str(u1))
         file.write(str(y2))
+        file.write('\n\n!')
+        file.close()
+
+        sleep(1)
+
+    elif a == 'openlast':
+        print('\nPrinting the last result: ', '\n')
+        file = open('last_calculator_result.txt', 'r')
+        print(file.read())
         file.close()
 
         sleep(1)
@@ -400,9 +424,9 @@ while True:
         sleep(1)
 
 #TODO:
-#Calculation progress
-#npy module
 #division by zero
+#x^y module
+#overall result
 
 
 
