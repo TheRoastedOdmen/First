@@ -54,9 +54,15 @@ while True:
 
         u1 = 'Addition result: '
         print()
-        print('+' * (len(u1) + len(str(sum(y))) + 2), '\n')
+        print('+' * (len(u1) + len(str(sum(y))) + 1), '\n')
         print(u1, sum(y), '\n')
-        print('+' * (len(u1) + len(str(sum(y))) + 2))
+        print('+' * (len(u1) + len(str(sum(y))) + 1))
+
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(sum(y)))
+        file.close()
 
         sleep(1)
 
@@ -83,9 +89,15 @@ while True:
 
         u1 = 'Substraction result: '
         print()
-        print('-' * (len(u1) + len(str(sum(y))) + 2), '\n')
+        print('-' * (len(u1) + len(str(sum(y))) + 1), '\n')
         print(u1, sum(y), '\n')
-        print('-' * (len(u1) + len(str(sum(y))) + 2))
+        print('-' * (len(u1) + len(str(sum(y))) + 1))
+
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(sum(y)))
+        file.close()
 
         sleep(1)
 
@@ -118,9 +130,15 @@ while True:
 
         u1 = 'Multiplication result: '
         print()
-        print('x' * (len(u1) + len(str(multi(y))) + 2), '\n')
+        print('x' * (len(u1) + len(str(multi(y))) + 1), '\n')
         print(u1, multi(y), '\n')
-        print('x' * (len(u1) + len(str(multi(y))) + 2))
+        print('x' * (len(u1) + len(str(multi(y))) + 1))
+
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(multy(y)))
+        file.close()
 
         sleep(1)
 
@@ -156,9 +174,15 @@ while True:
 
         u1 = 'Division result: '
         print()
-        print('/' * (len(u1) + len(str(div(y))) + 2), '\n')
+        print('/' * (len(u1) + len(str(div(y))) + 1), '\n')
         print(u1, div(y), '\n')
-        print('/' * (len(u1) + len(str(div(y))) + 2))
+        print('/' * (len(u1) + len(str(div(y))) + 1))
+
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(div(y)))
+        file.close()
 
         sleep(1)
 
@@ -197,6 +221,12 @@ while True:
         print(u1, y2, '\n')
         print('^' * (len(u1) + len(str(y2)) + 1))
 
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(y2))
+        file.close()
+
         sleep(1)
 
     elif a == 'y/x':
@@ -233,6 +263,12 @@ while True:
         print(u1, y2, '\n')
         print('/' * (len(u1) + len(str(y2)) + 1))
 
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(y2))
+        file.close()
+
         y3 = []
         for res in y2:
             res1 = res * 100
@@ -244,6 +280,12 @@ while True:
         print('%' * (len(u2) + len(str(y3)) +1), '\n')
         print(u2, y3, '\n')
         print('%' * (len(u2) + len(str(y3)) +1))
+
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u2))
+        file.write(str(y3))
+        file.close()
 
         sleep(1)
 
@@ -282,6 +324,12 @@ while True:
         print(u1, y2, '\n')
         print('/' * (len(u1) + len(str(y2)) + 1))
 
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(y2))
+        file.close()
+
         y3 = []
         for res in y2:
             res1 = res * 100
@@ -293,6 +341,12 @@ while True:
         print('%' * (len(u2) + len(str(y3)) +1), '\n')
         print(u2, y3, '\n')
         print('%' * (len(u2) + len(str(y3)) +1))
+
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u2))
+        file.write(str(y3))
+        file.close()
 
         sleep(1)
 
@@ -328,6 +382,11 @@ while True:
         print(u1, y2, '\n')
         print('!' * (len(u1) + len(str(y2)) + 1))
 
+        file = open('last_calculator_result.txt', "w")
+        file.write('Last ')
+        file.write(str(u1))
+        file.write(str(y2))
+        file.close()
 
         sleep(1)
 
