@@ -1,5 +1,5 @@
 from time import sleep
-import math
+from math import factorial
 #import numpy
 
 u = '\nL I S T   C A L C U L A T O R\n'
