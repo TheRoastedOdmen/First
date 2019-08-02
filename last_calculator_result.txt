@@ -1,11 +1,5 @@
-//
++
 
-Last x/y result: [0.1, 0.2, 0.5]
+Last Addition result: 6.0
 
-//
-
-%
-
-Last x/y % result: ['10.0%', '20.0%', '50.0%']
-
-%
++
