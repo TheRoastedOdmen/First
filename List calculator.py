@@ -11,11 +11,8 @@ print('\nFirstly choose an option')
 print('Then input the numbers via enter')
 print('When you done inputting press enter to get the result\n')
 
-try:
-    f = open('calculator_log.txt', 'w')
-    f.write('Last session\n')
-finally:
-    f.close()
+f = open('calculator_log.txt', 'w')
+f.write('Session\n')
 
 while True:
     try:
@@ -29,10 +26,10 @@ while True:
         print("Input 'x/y to divide a list of number to a 1 number (also %)")
         print("Input '!' to factorial the numbers")
         print("Input 'openlast' to see the last result")
-        print("Input 'openlog' to see the log")
+        print("Input 'openlog' to see the log of the session")
         print("\nInput 'exit' to quit the program")
 
-        f = open('calculator_log.txt', 'a')
+        f = open('Calculator_log.txt', 'a')
         a = str(input("\nChoose an option: "))
         n = 1
         y = []
@@ -67,21 +64,20 @@ while True:
             print(u1, sum(y), '\n')
             print('+' * (len(u1) + len(str(sum(y))) + 1))
 
-            def fwrite():
-                file.write('+')
-                file.write('\n\nLast ')
-                file.write(str(u1))
-                file.write(str(sum(y)))
-                file.write('\n\n+')
-                file.close()
-            file = open('last_calculator_result.txt', "w")
-            fwrite()
 
-            f = open('calculator_log.txt', "a")
-            f.write('\n\nLast ')
+            file = open('last_calculator_result.txt', "w")
+            file.write('+')
+            file.write('\n\nLast ')
+            file.write(str(u1))
+            file.write(str(sum(y)))
+            file.write('\n\n+')
+            file.close()
+
+            f.write('\n')
             f.write(str(u1))
             f.write(str(sum(y)))
-            f.close()
+            f.write('\n')
+
 
             sleep(1)
 
@@ -120,11 +116,11 @@ while True:
             file.write('\n\n-')
             file.close()
 
-            f.write('-')
-            f.write('\n\nLast ')
+            f.write('\n')
             f.write(str(u1))
             f.write(str(sum(y)))
-            f.write('\n\n-')
+            f.write('\n')
+
 
             sleep(1)
 
@@ -169,11 +165,10 @@ while True:
             file.write('\n\nx')
             file.close()
 
-            f.write('x')
-            f.write('\n\nLast ')
+            f.write('\n')
             f.write(str(u1))
             f.write(str(multi(y)))
-            f.write('\n\nx')
+            f.write('\n')
 
             sleep(1)
 
@@ -221,11 +216,10 @@ while True:
             file.write('\n\n/')
             file.close()
 
-            f.write('/')
-            f.write('\n\nLast ')
+            f.write('\n')
             f.write(str(u1))
             f.write(str(div(y)))
-            f.write('\n\n/')
+            f.write('\n')
 
             sleep(1)
 
@@ -272,11 +266,10 @@ while True:
             file.write('\n\n^')
             file.close()
 
-            f.write('^')
-            f.write('\n\nLast ')
+            f.write('\n')
             f.write(str(u1))
             f.write(str(y2))
-            f.write('\n\n^')
+            f.write('\n')
 
             sleep(1)
 
@@ -321,11 +314,10 @@ while True:
             file.write(str(y2))
             file.write('\n\n//')
 
-            f.write('//')
-            f.write('\n\nLast ')
+            f.write('\n')
             f.write(str(u1))
             f.write(str(y2))
-            f.write('\n\n//')
+            f.write('\n')
 
             y3 = []
             for res in y2:
@@ -346,11 +338,10 @@ while True:
             file.write('\n\n%')
             file.close()
 
-            f.write('\n\n\n%')
-            f.write('\n\nLast ')
+            f.write('\n')
             f.write(str(u2))
             f.write(str(y3))
-            f.write('\n\n%')
+            f.write('\n')
 
             sleep(1)
 
@@ -396,6 +387,11 @@ while True:
             file.write(str(y2))
             file.write('\n\n//')
 
+            f.write('\n')
+            f.write(str(u1))
+            f.write(str(y2))
+            f.write('\n')
+
             y3 = []
             for res in y2:
                 res1 = res * 100
@@ -414,6 +410,11 @@ while True:
             file.write(str(y3))
             file.write('\n\n%')
             file.close()
+
+            f.write('\n')
+            f.write(str(u2))
+            f.write(str(y3))
+            f.write('\n')
 
             sleep(1)
 
@@ -440,7 +441,7 @@ while True:
 
             y2 = []
             for x in y:
-                res = math.factorial(x)
+                res = factorial(x)
                 y2.append(res)
 
             u1 = 'Factorial result: '
@@ -457,6 +458,11 @@ while True:
             file.write('\n\n!')
             file.close()
 
+            f.write('\n')
+            f.write(str(u1))
+            f.write(str(y2))
+            f.write('\n')
+
             sleep(1)
 
         elif a == 'openlast':
@@ -469,8 +475,9 @@ while True:
 
         elif a == 'openlog':
             print('\nOpening the calculator log: ', '\n')
-            fcl = open('Calculator_log.txt', 'r')
-            print(fcl.read())
+            sleep(0.5)
+            f = open('Calculator_log.txt', 'r')
+            print(f.read())
 
             sleep(1)
 
@@ -490,7 +497,8 @@ while True:
 #division by zero
 #overall result log
 #dates in python
-
+#what was calculating in logs
+#yield instead of lists in results
 
 
 
