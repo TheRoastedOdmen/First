@@ -27,7 +27,7 @@ while True:
         print("Input '!' to factorial the numbers")
         print("Input 'openlast' to see the last result")
         print("Input 'openlog' to see the log of the session")
-        print("\nInput 'exit' to quit the programMMM")
+        print("\nInput 'exit' to quit the program")
 
         f = open('Calculator_log.txt', 'a')
         a = str(input("\nChoose an option: "))
