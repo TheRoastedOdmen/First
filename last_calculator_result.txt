@@ -1,12 +1,5 @@
-//
+/
 
-Last x/y result: [10.0, 1.0]
+Last Division result: 1.2857142857142856
 
-//
-
-
-%
-
-Last x/y % result: ['1000.0%', '100.0%']
-
-%
+/

@@ -64,7 +64,6 @@ while True:
             print(u1, sum(y), '\n')
             print('+' * (len(u1) + len(str(sum(y))) + 1))
 
-
             file = open('last_calculator_result.txt', "w")
             file.write('+')
             file.write('\n\nLast ')
@@ -77,7 +76,6 @@ while True:
             f.write(str(u1))
             f.write(str(sum(y)))
             f.write('\n')
-
 
             sleep(1)
 
