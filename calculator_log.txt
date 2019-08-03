@@ -1,0 +1,5 @@
+Session
+
+Exponentiation result: [1.0, 4.0, 9.0]
+
+Addition result: 15.0
