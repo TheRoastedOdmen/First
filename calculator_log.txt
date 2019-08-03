@@ -1,9 +1,5 @@
 Session
 
-Addition result: 6.0
+Exponentiation result: [1.0, 4.0, 9.0]
 
-Substraction result: -6.0
-
-Multiplication result: 6.0
-
-Division result: 1.2857142857142856
+Addition result: 15.0
