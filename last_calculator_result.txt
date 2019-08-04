@@ -1,5 +1,5 @@
-^
++
 
-Last Exponentiation result: [5.0, 6.0]
+Last Addition result: 12.0
 
-^
++
