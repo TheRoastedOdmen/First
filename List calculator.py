@@ -12,7 +12,7 @@ print('Then input the numbers via enter')
 print('When you done inputting press enter to get the result\n')
 
 f = open('calculator_log.txt', 'w')
-f.write('Session\n')
+f.write('\n')
 
 while True:
     try:
@@ -37,6 +37,10 @@ while True:
 
         if a == "exit":
             break
+        
+
+#Addition module
+
         elif a == '+':
             print('\nYou have choosen the Addition\n')
             x = float(input('Enter the number: '))
@@ -78,6 +82,9 @@ while True:
             f.write('\n')
 
             sleep(1)
+
+
+#Substraction module
 
         elif a == '-':
             print('\nYou have choosen the Substraction\n')
@@ -121,6 +128,9 @@ while True:
 
 
             sleep(1)
+
+
+#Multiplication module
 
         elif a == '*' or a == 'x':
             print('\nYou have choosen the Multiplication\n')
@@ -169,6 +179,9 @@ while True:
             f.write('\n')
 
             sleep(1)
+
+
+#Division module
 
         elif a == '/':
             print('\nYou have choosen the Division\n')
@@ -221,6 +234,9 @@ while True:
 
             sleep(1)
 
+
+#Exponentiation module
+
         elif a == '**' or a == '^':
             print('\nYou have choosen the Exponentiation\n')
             x = float(input('Enter the number: '))
@@ -270,6 +286,9 @@ while True:
             f.write('\n')
 
             sleep(1)
+
+
+#y/x module
 
         elif a == 'y/x':
             print('\nYou have choosen the y/x\n')
@@ -342,6 +361,9 @@ while True:
             f.write('\n')
 
             sleep(1)
+
+
+#x/y module
 
         elif a == 'x/y':
             print('\nYou have choosen the x/y\n')
@@ -416,6 +438,9 @@ while True:
 
             sleep(1)
 
+
+#Factorial module
+
         elif a == '!':
             print('\nYou have choosen the Factorial\n')
             x = int(input('Enter the number: '))
@@ -463,6 +488,9 @@ while True:
 
             sleep(1)
 
+
+#Log modules
+
         elif a == 'openlast':
             print('\nPrinting the last result: ', '\n')
             file = open('last_calculator_result.txt', 'r')
@@ -472,12 +500,13 @@ while True:
             sleep(1)
 
         elif a == 'openlog':
-            print('\nOpening the calculator log: ', '\n')
+            print('\nPrinting the last session of the calculator log: ', '\n')
             sleep(0.5)
             f = open('Calculator_log.txt', 'r')
             print(f.read())
 
             sleep(1)
+
 
         else:
             q = 'Unknown input'
@@ -493,7 +522,6 @@ while True:
 
 #TODO:
 #division by zero
-#overall result log
 #dates in python
 #what was calculating in logs
 #yield instead of lists in results
