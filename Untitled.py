@@ -1,5 +1,6 @@
 x = int(input('x: '))
 
+#prints uneven numbers in the range of x
 def numbers(x):
   for i in range(x):
     if not i % 2 == 0:
@@ -7,13 +8,20 @@ def numbers(x):
 
 print(list(numbers(x)))
 
-
-y = int(input("y: "))
-
-def f(y):
+#prints the sum of every number in the range of x
+def f(x):
   res = 0
-  for i in range(y):
+  for i in range(x + 1):
     res += i
   return res
 
-print(f(y))
+print(f(x))
+
+#prints the list of numbers (+i) in the range of x
+def f1(x):
+  res = 0
+  for i in range(x + 1):
+    res += i
+    yield res
+
+print(list(f1(x)))
