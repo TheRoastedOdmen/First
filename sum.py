@@ -4,6 +4,7 @@ def s(x):
     res = 0
     for i in range(x):
         res += i
-        yield res
+    return res
 
-print(list(s(x)))
+#print(list(s(x)))
+print(s(x))
