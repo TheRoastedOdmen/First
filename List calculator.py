@@ -525,6 +525,4 @@ while True:
 #dates in python
 #what was calculating in logs
 #yield instead of lists in results
-
-
-
+#modules
