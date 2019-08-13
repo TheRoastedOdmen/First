@@ -27,7 +27,7 @@ while True:
         print("Input '!' to factorial the numbers")
         print("Input 'openlast' to see the last result")
         print("Input 'openlog' to see the log of the session")
-        print("\nInput 'exit' to quit the programMMM")
+        print("\nInput 'exit' to quit the program")
 
         f = open('Calculator_log.txt', 'a')
         a = str(input("\nChoose an option: "))
@@ -261,11 +261,8 @@ while True:
             v = float(input('Enter the exponent: '))
             print('\nExponent:--->', v)
 
-            y2 = []
-            for x in y:
-                res = x**v
-                y2.append(res)
-
+            y2 = [x**v for x in y]
+            
             u1 = 'Exponentiation result: '
             print()
             print('^' * (len(u1) + len(str(y2)) + 1), '\n')
@@ -313,11 +310,8 @@ while True:
                 except:
                     break
 
-            y2 = []
-            for x in y:
-                res = z/x
-                y2.append(res)
-
+            y2 = [z/x for x in y]
+            
             u1 = 'y/x result: '
             print()
             print('/' * (len(u1) + len(str(y2)) + 1), '\n')
@@ -336,11 +330,7 @@ while True:
             f.write(str(y2))
             f.write('\n')
 
-            y3 = []
-            for res in y2:
-                res1 = res * 100
-                res2 = str(res1) + '%'
-                y3.append(res2)
+            y3 = [(str(res*100) + '%') for res in y2]
 
             u2 ='y/x % result: '
             print()
@@ -389,11 +379,8 @@ while True:
             z1 = float(input('Enter the division number (y): '))
             print('Division number (y): ', z1)
 
-            y2 = []
-            for x in y:
-                res = x/z1
-                y2.append(res)
-
+            y2 = [x/z1 for x in y]
+            
             u1 = 'x/y result: '
             print()
             print('/' * (len(u1) + len(str(y2)) + 1), '\n')
@@ -412,11 +399,7 @@ while True:
             f.write(str(y2))
             f.write('\n')
 
-            y3 = []
-            for res in y2:
-                res1 = res * 100
-                res2 = str(res1) + '%'
-                y3.append(res2)
+            y3 = [(str(res*100) + '%') for res in y2]
 
             u2 ='x/y % result: '
             print()
@@ -462,10 +445,7 @@ while True:
                 except:
                     break
 
-            y2 = []
-            for x in y:
-                res = factorial(x)
-                y2.append(res)
+            y2 = [factorial(x) for x in y]
 
             u1 = 'Factorial result: '
             print()
