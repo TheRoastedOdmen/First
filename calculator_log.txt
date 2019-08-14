@@ -1,13 +1,3 @@
 
 
-Exponentiation result: [1.0, 4.0, 9.0]
-
-y/x result: [0.1, 0.01]
-
-y/x % result: ['10.0%', '1.0%']
-
-Factorial result: [1, 2, 6]
-
-x/y result: [0.1, 0.2, 0.3]
-
-x/y % result: ['10.0%', '20.0%', '30.0%']
+Addition result: 18.0

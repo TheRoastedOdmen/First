@@ -7,27 +7,28 @@ print('#' * ((len(str(u))) - 2))
 print(u)
 print('#' * ((len(str(u))) - 2))
 
-print('\nFirstly choose an option')
-print('Then input the numbers via enter')
-print('When you done inputting press enter to get the result\n')
+print('\nFirstly choose an option\n'
+    'Then input the numbers via enter\n'
+    'When you done inputting press enter to get the result\n'
+    'Note that yopu can input any amount of numbers\n')
 
 f = open('calculator_log.txt', 'w')
 f.write('\n')
 
 while True:
     try:
-        print("\n__________OPTIONS___________ \n")
-        print("Input '+' to add the numbers")
-        print("Input '-' to substract the numbers")
-        print("Input '*' or 'x' to multiply the numbers")
-        print("Input '/' to divide the numbers")
-        print("Input '**' or '^' to exponentiation of the numbers")
-        print("Input 'y/x to divide 1 number to a list of numbers (also %)")
-        print("Input 'x/y to divide a list of number to a 1 number (also %)")
-        print("Input '!' to factorial the numbers")
-        print("Input 'openlast' to see the last result")
-        print("Input 'openlog' to see the log of the session")
-        print("\nInput 'exit' to quit the program")
+        print("\n__________OPTIONS___________ \n"
+            "\nInput '+' to add the numbers\n"
+            "Input '-' to substract the numbers\n"
+            "Input '*' or 'x' to multiply the numbers\n"
+            "Input '/' to divide the numbers\n"
+            "Input '**' or '^' to exponentiation of the numbers\n"
+            "Input 'y/x' to divide 1 number to a list of numbers (also %)\n"
+            "Input 'x/y' to divide a list of number to a 1 number (also %)\n"
+            "Input '!' to factorial the numbers\n"
+            "Input 'openlast' to see the last result\n"
+            "Input 'openlog' to see the log of the session\n"
+            "\nInput 'exit' to quit the program")
 
         f = open('Calculator_log.txt', 'a')
         a = str(input("\nChoose an option: "))
