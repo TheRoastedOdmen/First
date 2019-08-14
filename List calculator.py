@@ -503,7 +503,7 @@ while True:
 
 #TODO:
 #division by zero
-#dates in python
+#dates in python logs
 #what was calculating in logs
 #yield instead of lists in results
 #modules
