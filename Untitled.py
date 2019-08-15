@@ -6,7 +6,12 @@ def numbers(x):
     if not i % 2 == 0:
       yield i
 
-print(list(numbers(x)))
+print()
+for i in numbers(x): #prints in column
+  print(i)
+
+print()
+print(list(numbers(x))) #prints in list
 
 #prints the sum of every number in the range of x
 def f(x):
@@ -15,7 +20,8 @@ def f(x):
     res += i
   return res
 
-print(f(x))
+print()
+print('sum: ', f(x))
 
 #prints the list of numbers (+i) in the range of x
 def f1(x):
@@ -24,4 +30,9 @@ def f1(x):
     res += i
     yield res
 
-print(list(f1(x)))
+print()
+for i in f1(x):
+  print(i) #prints in column
+
+print()
+print(list(f1(x))) #prints in list
