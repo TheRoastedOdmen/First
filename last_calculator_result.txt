@@ -1,5 +1,8 @@
 ^
 
-Last Exponentiation result: 9.0
+Last Exponentiation result: 
+64.0
+216.0
+512.0
 
 ^

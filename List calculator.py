@@ -236,6 +236,8 @@ while True:
             sleep(1)
 
 
+#List calculator modules
+
 #Exponentiation module
 
         elif a == '**' or a == '^':
@@ -281,13 +283,19 @@ while True:
             file.write('^')
             file.write('\n\nLast ')
             file.write(str(u1))
-            file.write(str(y2))
-            file.write('\n\n^')
+            file.write('\n')
+            for y2 in m(x):
+                file.write(str(y2))
+                file.write('\n')
+            file.write('\n^')
             file.close()
 
             f.write('\n')
             f.write(str(u1))
-            f.write(str(y2))
+            f.write('\n')
+            for y2 in m(x):
+                f.write(str(y2))
+                f.write('\n')
             f.write('\n')
 
             sleep(1)
@@ -318,7 +326,13 @@ while True:
                 except:
                     break
 
-            y2 = [z/x for x in y]
+            def m(x):
+                y2 = 0 
+                for x in y:
+                    y2 = x**v
+                    yield y2
+
+            maxy2 = [x**v for x in y]
             
             u1 = 'y/x result: '
             print()
@@ -330,12 +344,17 @@ while True:
             file.write('//')
             file.write('\n\nLast ')
             file.write(str(u1))
-            file.write(str(y2))
-            file.write('\n\n//')
+            file.write('\n')
+            for y2 in m(x):
+                file.write(str(y2))
+                file.write('\n')
+            file.write('\n//')
 
             f.write('\n')
             f.write(str(u1))
-            f.write(str(y2))
+            for y2 in m(x):
+                f.write(str(y2))
+                f.write('\n')
             f.write('\n')
 
             y3 = [(str(res*100) + '%') for res in y2]

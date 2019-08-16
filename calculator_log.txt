@@ -1,3 +1,7 @@
 
 
-Exponentiation result: 9.0
+Exponentiation result: 
+64.0
+216.0
+512.0
+
