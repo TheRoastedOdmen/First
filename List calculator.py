@@ -262,13 +262,20 @@ while True:
             v = float(input('Enter the exponent: '))
             print('\nExponent:--->', v)
 
-            y2 = [x**v for x in y]
+            def m(x):
+                y2 = 0 
+                for x in y:
+                    y2 = x**v
+                    yield y2
+
+            maxy2 = [x**v for x in y]
             
             u1 = 'Exponentiation result: '
             print()
-            print('^' * (len(u1) + len(str(y2)) + 1), '\n')
-            print(u1, y2, '\n')
-            print('^' * (len(u1) + len(str(y2)) + 1))
+            print('^' * (len(u1) + len(str(max(maxy2))) + 1), '\n')
+            for y2 in m(x):
+                print(u1, y2, '\n')
+            print('^' * (len(u1) + len(str(max(maxy2))) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('^')

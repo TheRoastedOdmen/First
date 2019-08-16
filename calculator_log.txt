@@ -1,3 +1,3 @@
 
 
-Addition result: 18.0
+Exponentiation result: 9.0
