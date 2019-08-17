@@ -1,7 +1,5 @@
 
 
-Exponentiation result: 
-64.0
-216.0
-512.0
+x/y result: [0.1, 0.2, 0.3]
 
+x/y % result: ['10.0 %', '20.0 %', '30.0 %']
