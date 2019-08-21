@@ -98,22 +98,22 @@ while True:
                 try:
                     n += 1
                     y.append(x)
-                    x = float(input('Enter the number: '))*-1
+                    x = float(input('Enter the number: '))
                     if len(y)%10 == 0 and len(y) != 10:
-                        print(str(n) + 'st number:-->',x*-1)
+                        print(str(n) + 'st number:-->',x)
                     elif len(y)%10 == 1 and len(y) != 11:
-                        print(str(n) + 'nd number:-->',x*-1)
+                        print(str(n) + 'nd number:-->',x)
                     elif len(y)%10 == 2 and len(y) != 12:
-                        print(str(n) + 'rd number:-->',x*-1)
+                        print(str(n) + 'rd number:-->',x)
                     elif len(y) > 2:
-                        print(str(n) + 'th number:-->',x*-1)
+                        print(str(n) + 'th number:-->',x)
                 except:
                     break
 
             u1 = 'Substraction result: '
             print()
             print('-' * (len(u1) + len(str(sum(y))) + 1), '\n')
-            print(u1, sum(y), '\n')
+            print(u1, sum(y*(-1)), '\n')
             print('-' * (len(u1) + len(str(sum(y))) + 1))
 
             file = open('last_calculator_result.txt', "w")
@@ -271,14 +271,12 @@ while True:
                     y1 = x**v
                     yield y1
 
-            maxy1 = [x**v for x in y]
-            
             u1 = 'Exponentiation result: '
             print()
-            print('^' * (len(u1) + len(str(max(maxy1))) + 1), '\n')
+            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 1), '\n')
             for y1 in m1(x):
                 print(u1, y1, '\n')
-            print('^' * (len(u1) + len(str(max(maxy1))) + 1))
+            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('^')
@@ -547,3 +545,4 @@ while True:
 #what was calculating in logs
 #yield instead of lists in results
 #modules
+#rounding
