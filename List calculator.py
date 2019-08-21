@@ -23,8 +23,8 @@ while True:
             "Input '*' or 'x' to multiply the numbers\n"
             "Input '/' to divide the numbers\n"
             "Input '**' or '^' to exponentiation of the numbers\n"
-            "Input 'y/x' to divide 1 number to a list of numbers (also %)\n"
-            "Input 'x/y' to divide a list of number to a 1 number (also %)\n"
+            "Input 'y/x' to divide the one number to a list of numbers (also %)\n"
+            "Input 'x/y' to divide a list of number to the one number (also %)\n"
             "Input '!' to factorial the numbers\n"
             "Input 'openlast' to see the last result\n"
             "Input 'openlog' to see the log of the session\n"
@@ -110,25 +110,30 @@ while True:
                 except:
                     break
 
+            def sub(x):
+                y1 = y[0]
+                for x in y[1::]:
+                    y1 += -x
+                return y1
+
             u1 = 'Substraction result: '
             print()
-            print('-' * (len(u1) + len(str(sum(y))) + 1), '\n')
-            print(u1, sum(y*(-1)), '\n')
-            print('-' * (len(u1) + len(str(sum(y))) + 1))
+            print('-' * (len(u1) + len(str(sub(x))) + 1), '\n')
+            print(u1, sub(x), '\n')
+            print('-' * (len(u1) + len(str(sub(x))) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('-')
             file.write('\n\nLast ')
             file.write(str(u1))
-            file.write(str(sum(y)))
+            file.write(str(sub(x)))
             file.write('\n\n-')
             file.close()
 
             f.write('\n')
             f.write(str(u1))
-            f.write(str(sum(y)))
+            f.write(str(sub(x)))
             f.write('\n')
-
 
             sleep(1)
 
