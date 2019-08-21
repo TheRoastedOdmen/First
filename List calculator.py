@@ -112,7 +112,7 @@ while True:
 
             def sub(x):
                 y1 = y[0]
-                for x in y[1::]:
+                for x in y[1:]:
                     y1 += -x
                 return y1
 

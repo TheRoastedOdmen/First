@@ -1,3 +1,7 @@
 
 
 Substraction result: -4.0
+
+Substraction result: -8.0
+
+Substraction result: -6.0
