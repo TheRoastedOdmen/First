@@ -26,7 +26,7 @@ while True:
             "Input 'y/x' to divide the one number to a list of numbers (also %)\n"
             "Input 'x/y' to divide a list of number to the one number (also %)\n"
             "Input '!' to factorial the numbers\n"
-            "Input 'openlast' to see the last result\n"
+        #    "Input 'openlast' to see the last result\n"
             "Input 'openlog' to see the log of the session\n"
             "\nInput 'exit' to quit the program")
 
@@ -162,10 +162,10 @@ while True:
                     break
 
             def multi(y):
-                res = 1
+                y1 = 1
                 for x in y:
-                    res = res * x
-                return res
+                    y1 = y1 * x
+                return y1
 
             u1 = 'Multiplication result: '
             print()
@@ -200,26 +200,25 @@ while True:
                 try:
                     n += 1
                     y.append(x)
-                    x = 1/float(input('Enter the number: '))
+                    x = float(input('Enter the number: '))
                     if len(y)%10 == 0 and len(y) != 10:
-                        print(str(n) + 'st number:-->',1/x)
+                        print(str(n) + 'st number:-->',x)
                     elif len(y)%10 == 1 and len(y) != 11:
-                        print(str(n) + 'nd number:-->',1/x)
+                        print(str(n) + 'nd number:-->',x)
                     elif len(y)%10 == 2 and len(y) != 12:
-                        print(str(n) + 'rd number:-->',1/x)
+                        print(str(n) + 'rd number:-->',x)
                     elif len(y) > 2:
-                        print(str(n) + 'th number:-->',1/x)
+                        print(str(n) + 'th number:-->',x)
 
-                    # TODO: Program has to delete x = 0 value and continue
-                    #       to append(x) (same to y/x and x/y)
+                    
                 except:
                     break
 
             def div(y):
-                res = 1
-                for x in y:
-                    res = res * x
-                return res
+                y1 = y[0]
+                for x in y[1:]:
+                    y1 = y1/x
+                return y1
 
             u1 = 'Division result: '
             print()
@@ -240,7 +239,8 @@ while True:
             f.write(str(div(y)))
             f.write('\n')
 
-            sleep(1)
+            sleep(1) # TODO: Program has to delete x = 0 value and continue
+                     #       to append(x) (same to y/x and x/y)
 
 
 #List calculator modules
@@ -524,7 +524,7 @@ while True:
             sleep(1)
 
         elif a == 'openlog':
-            print('\nPrinting the last session of the calculator log: ', '\n')
+            print('\nPrinting the last session of the calculator log: ')
             sleep(0.5)
             f = open('Calculator_log.txt', 'r')
             print(f.read())

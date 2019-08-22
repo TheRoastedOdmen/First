@@ -1,5 +1,5 @@
--
++
 
-Last Substraction result: -6.0
+Last Addition result: 6.0
 
--
++
