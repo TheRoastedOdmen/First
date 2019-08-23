@@ -334,16 +334,13 @@ while True:
                 for x in y:
                     y1 = z/x
                     yield y1
-                return y1
-
-            maxy1 = [z/x for x in y]
-            
+          
             u1 = 'y/x result: '
             print()
-            print('/' * (len(u1) + len(max(str(y1))) + 1), '\n')
+            print('/' * (len(u1) + len(max((str(z/x) for x in y), key=len)) + 1), '\n')
             for y1 in m1(x):
                 print(u1, y1, '\n')
-            print('/' * (len(u1) + len(max(str(y1))) + 1))
+            print('/' * (len(u1) + len(max((str(z/x) for x in y), key=len)) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('//')
