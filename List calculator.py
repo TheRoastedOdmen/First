@@ -12,8 +12,8 @@ print('\nFirstly choose an option\n'
     'When you done inputting press enter to get the result\n'
     'Note that yopu can input any amount of numbers\n')
 
-f = open('calculator_log.txt', 'w')
-f.write('\n')
+log = open('calculator_log.txt', 'w')
+log.write('\n')
 
 while True:
     try:
@@ -30,7 +30,7 @@ while True:
             "Input 'openlog' to see the log of the session\n"
             "\nInput 'exit' to quit the program")
 
-        f = open('Calculator_log.txt', 'a')
+        log = open('Calculator_log.txt', 'a')
         a = str(input("\nChoose an option: "))
         n = 1
         y = []
@@ -79,10 +79,10 @@ while True:
             file.write('\n+')
             file.close()
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write(str(sum(y)))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write(str(sum(y)))
+            log.write('\n')
 
             sleep(1)
 
@@ -130,10 +130,10 @@ while True:
             file.write('\n-')
             file.close()
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write(str(sub(x)))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write(str(sub(x)))
+            log.write('\n')
 
             sleep(1)
 
@@ -181,10 +181,10 @@ while True:
             file.write('\nx')
             file.close()
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write(str(multi(y)))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write(str(multi(y)))
+            log.write('\n')
 
             sleep(1)
 
@@ -234,10 +234,10 @@ while True:
             file.write('\n/')
             file.close()
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write(str(div(y)))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write(str(div(y)))
+            log.write('\n')
 
             sleep(1) # TODO: Program has to delete x = 0 value and continue
                      #       to append(x) (same to y/x and x/y)
@@ -294,13 +294,13 @@ while True:
             file.write('\n^')
             file.close()
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write('\n')
             for y1 in m1(x):
-                f.write(str(y1))
-                f.write('\n')
-            f.write('\n')
+                log.write(str(y1))
+                log.write('\n')
+            log.write('\n')
 
             sleep(1)
 
@@ -352,13 +352,13 @@ while True:
                 file.write('\n')
             file.write('\n//')
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write('\n')
             for y1 in m1(x):
-                f.write(str(y1))
-                f.write('\n')
-            f.write('\n')
+                log.write(str(y1))
+                log.write('\n')
+            log.write('\n')
 
             #y/x % result
 
@@ -384,13 +384,13 @@ while True:
             file.write('\n%')
             file.close()
 
-            f.write('\n')
-            f.write(str(u2))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u2))
+            log.write('\n')
             for y2 in m2(x):
-                f.write(str(y2))
-                f.write('\n')
-            f.write('\n')
+                log.write(str(y2))
+                log.write('\n')
+            log.write('\n')
 
             sleep(1)
 
@@ -443,13 +443,13 @@ while True:
                 file.write('\n')
             file.write('\n//')
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write('\n')
             for y1 in m1(x):
-                f.write(str(y1))
-                f.write('\n')
-            f.write('\n')
+                log.write(str(y1))
+                log.write('\n')
+            log.write('\n')
 
             #x/y % result
 
@@ -475,13 +475,13 @@ while True:
             file.write('\n%')
             file.close()
 
-            f.write('\n')
-            f.write(str(u2))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u2))
+            log.write('\n')
             for y2 in m2(x):
-                f.write(str(y2))
-                f.write('\n')
-            f.write('\n')
+                log.write(str(y2))
+                log.write('\n')
+            log.write('\n')
 
             sleep(1)
 
@@ -509,26 +509,38 @@ while True:
                 except:
                     break
 
-            y1 = [factorial(x) for x in y]
+            #vaule error skipping is needed
 
+            def m1(x):
+                for x in y:
+                    y1 = factorial(x)
+                    yield y1
+            
             u1 = 'Factorial result: '
             print()
-            print('!' * (len(u1) + len(str(y1)) + 1), '\n')
-            print(u1, y1, '\n')
-            print('!' * (len(u1) + len(str(y1)) + 1))
+            print('!' * (len(u1) + len(max((str(factorial(x)) for x in y), key=len)) + 1), '\n')
+            for y1 in m1(x):
+                print(u1, y1, '\n')
+            print('!' * (len(u1) + len(max((str(factorial(x)) for x in y), key=len)) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('!')
             file.write('\n\nLast ')
             file.write(str(u1))
-            file.write(str(y1))
-            file.write('\n!')
+            file.write('\n')
+            for y1 in m1(x):
+                file.write(str(y1))
+                file.write('\n')
+            file.write('\n!')    
             file.close()
 
-            f.write('\n')
-            f.write(str(u1))
-            f.write(str(y1))
-            f.write('\n')
+            log.write('\n')
+            log.write(str(u1))
+            log.write('\n')
+            for y1 in m1(x):
+                log.write(str(y1))
+                log.write('\n')
+            log.write('\n')
 
             sleep(1)
 
@@ -546,8 +558,8 @@ while True:
         elif a == 'openlog':
             print('\nPrinting the last session of the calculator log: ')
             sleep(0.5)
-            f = open('Calculator_log.txt', 'r')
-            print(f.read())
+            log = open('Calculator_log.txt', 'r')
+            print(log.read())
 
             sleep(1)
 
@@ -562,14 +574,12 @@ while True:
             sleep(1)
 
     finally:
-        f.close()
+        log.close()
 
 #TODO:
 #division by zero
-#dates in python logs
+#dates in python log
 #what was calculating in logs
-#yield instead of lists in results
-#modules
+#modules and decorators
 #rounding
 #unknown inputs in x
-#decorators

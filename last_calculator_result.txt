@@ -1,16 +1,8 @@
-//
+!
 
-Last x/y result: 
-0.5
-0.1
+Last Factorial result: 
+2
+6
+24
 
-//
-
-
-%
-
-Last x/y % result: 
-50.0%
-10.0%
-
-%
+!
