@@ -1,19 +1,16 @@
 //
 
-Last y/x result: 
-1.0
+Last x/y result: 
 0.5
-0.25
+0.1
 
 //
 
 
 %
 
-Last y/x % result: 
-25.0 %
-25.0 %
-25.0 %
-
+Last x/y % result: 
+50.0%
+10.0%
 
 %

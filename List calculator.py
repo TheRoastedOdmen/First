@@ -76,7 +76,7 @@ while True:
             file.write('\n\nLast ')
             file.write(str(u1))
             file.write(str(sum(y)))
-            file.write('\n\n+')
+            file.write('\n+')
             file.close()
 
             f.write('\n')
@@ -127,7 +127,7 @@ while True:
             file.write('\n\nLast ')
             file.write(str(u1))
             file.write(str(sub(x)))
-            file.write('\n\n-')
+            file.write('\n-')
             file.close()
 
             f.write('\n')
@@ -178,7 +178,7 @@ while True:
             file.write('\n\nLast ')
             file.write(str(u1))
             file.write(str(multi(y)))
-            file.write('\n\nx')
+            file.write('\nx')
             file.close()
 
             f.write('\n')
@@ -231,7 +231,7 @@ while True:
             file.write('\n\nLast ')
             file.write(str(u1))
             file.write(str(div(y)))
-            file.write('\n\n/')
+            file.write('\n/')
             file.close()
 
             f.write('\n')
@@ -278,10 +278,10 @@ while True:
 
             u1 = 'Exponentiation result: '
             print()
-            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 3), '\n')
+            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 1), '\n')
             for y1 in m1(x):
                 print(u1, y1, '\n')
-            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 3))
+            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('^')
@@ -360,27 +360,28 @@ while True:
                 f.write('\n')
             f.write('\n')
 
+            #y/x % result
+
             def m2(x):
                 for y1 in m1(x):
                     y2 = str(y1*100) + ' %'
                     yield y2
-            maxy2 = [(str(y1*100) + ' %') for y1 in m1(x)]
 
             u2 ='y/x % result: '
             print()
-            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +1), '\n')
+            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +3), '\n')
             for y2 in m2(x):
                 print(u2, y2, '\n')
-            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +1))
+            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +3))
 
             file.write('\n\n\n%')
             file.write('\n\nLast ')
             file.write(str(u2))
             file.write('\n')
-            for x in y:
+            for y2 in m2(x):
                 file.write(str(y2))
                 file.write('\n')
-            file.write('\n\n%')
+            file.write('\n%')
             file.close()
 
             f.write('\n')
@@ -420,44 +421,66 @@ while True:
             z = float(input('Enter the division number (y): '))
             print('Division number (y): ', z)
 
-            y1 = [x/z for x in y]
-            
+            def m1(x):
+                for x in y:
+                    y1 = x/z
+                    yield y1
+           
             u1 = 'x/y result: '
             print()
-            print('/' * (len(u1) + len(str(y1)) + 1), '\n')
-            print(u1, y1, '\n')
-            print('/' * (len(u1) + len(str(y1)) + 1))
+            print('/' * (len(u1) + len(max((str(x/z) for x in y), key=len)) + 1), '\n')
+            for y1 in m1(x):
+                print(u1, y1, '\n')
+            print('/' * (len(u1) + len(max((str(x/z) for x in y), key=len)) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('//')
             file.write('\n\nLast ')
             file.write(str(u1))
-            file.write(str(y1))
-            file.write('\n\n//')
+            file.write('\n')
+            for y1 in m1(x):
+                file.write(str(y1))
+                file.write('\n')
+            file.write('\n//')
 
             f.write('\n')
             f.write(str(u1))
-            f.write(str(y1))
+            f.write('\n')
+            for y1 in m1(x):
+                f.write(str(y1))
+                f.write('\n')
             f.write('\n')
 
-            y2 = [(str(res*100) + ' %') for res in y1]
+            #x/y % result
+
+            def m2(x):
+                for y1 in m1(x):
+                    y2 = str(y1*100) + '%'
+                    yield y2
 
             u2 ='x/y % result: '
             print()
-            print('%' * (len(u2) + len(str(y2)) +1), '\n')
-            print(u2, y2, '\n')
-            print('%' * (len(u2) + len(str(y2)) +1))
+            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +2), '\n')
+            for y2 in m2(x):
+                print(u2, y2, '\n')
+            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +2))
 
             file.write('\n\n\n%')
             file.write('\n\nLast ')
             file.write(str(u2))
-            file.write(str(y2))
-            file.write('\n\n%')
+            file.write('\n')
+            for y2 in m2(x):
+                file.write(str(y2))
+                file.write('\n')
+            file.write('\n%')
             file.close()
 
             f.write('\n')
             f.write(str(u2))
-            f.write(str(y2))
+            f.write('\n')
+            for y2 in m2(x):
+                f.write(str(y2))
+                f.write('\n')
             f.write('\n')
 
             sleep(1)
@@ -499,7 +522,7 @@ while True:
             file.write('\n\nLast ')
             file.write(str(u1))
             file.write(str(y1))
-            file.write('\n\n!')
+            file.write('\n!')
             file.close()
 
             f.write('\n')
@@ -548,3 +571,5 @@ while True:
 #yield instead of lists in results
 #modules
 #rounding
+#unknown inputs in x
+#decorators
