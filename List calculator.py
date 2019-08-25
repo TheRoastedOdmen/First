@@ -278,10 +278,10 @@ while True:
 
             u1 = 'Exponentiation result: '
             print()
-            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 1), '\n')
+            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 3), '\n')
             for y1 in m1(x):
                 print(u1, y1, '\n')
-            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 1))
+            print('^' * (len(u1) + len(max((str(x**v) for x in y), key=len)) + 3))
 
             file = open('last_calculator_result.txt', "w")
             file.write('^')
@@ -368,10 +368,10 @@ while True:
 
             u2 ='y/x % result: '
             print()
-            print('%' * (len(u2) + len(str(maxy2)) +1), '\n')
+            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +1), '\n')
             for y2 in m2(x):
                 print(u2, y2, '\n')
-            print('%' * (len(u2) + len(str(maxy2)) +1))
+            print('%' * (len(u2) + len(max((str(y1*100) for y1 in m1(x)), key=len)) +1))
 
             file.write('\n\n\n%')
             file.write('\n\nLast ')
