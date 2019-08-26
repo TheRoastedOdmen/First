@@ -13,6 +13,8 @@ for i in numbers(x): #prints in column
 print()
 print(list(numbers(x))) #prints in list
 
+print('_','\n_')
+
 #prints the sum of every number in the range of x
 def f(x):
   res = 0
@@ -22,6 +24,8 @@ def f(x):
 
 print()
 print('sum: ', f(x))
+
+print('_','\n_')
 
 #prints the list of numbers (+i) in the range of x
 def f1(x):
