@@ -13,7 +13,7 @@ print('\nFirstly choose an option\n'
     'Note that yopu can input any amount of numbers\n')
 
 log = open('calculator_log.txt', 'w')
-log.write('\n')
+rn = 10 #rounding
 
 while True:
     try:
@@ -28,10 +28,11 @@ while True:
             "Input '!' to factorial the numbers\n"
         #    "Input 'openlast' to see the last result\n"
             "Input 'openlog' to see the log of the session\n"
+            "Input 'round' to set the rounding number of the results\n"
             "\nInput 'exit' to quit the program")
 
         log = open('Calculator_log.txt', 'a')
-        a = str(input("\nChoose an option: "))
+        a = str(input("\nChoose an option: ")).lower()
         n = 1
         y = []
         y1 = 0
@@ -40,7 +41,23 @@ while True:
 
         if a == "exit":
             break
-        
+
+
+#Rounding module
+        elif a == 'round' or a == 'rounding':
+            print("\nYou can set the rounding number for the results\n"
+                "0 will round results to the integer,\n" 
+                "1 - to the first number after integer, e.t.c.\n"
+                "10 is by default\n")
+            rn = int(input('Enter the rounding number: '))
+            print("Rounding number: ", rn, '\n')
+
+            log.write('\n')
+            log.write('The rounding number is set to ')
+            log.write(str(rn))
+            log.write('\n')
+
+            sleep(1)
 
 #Addition module
 
@@ -144,7 +161,7 @@ while True:
             print('\nYou have choosen the Multiplication\n')
             x = float(input('Enter the number: '))
             print(str(n) + 'st number:-->',x)
-
+            
             while True:
                 try:
                     n += 1
@@ -218,7 +235,7 @@ while True:
                 y1 = y[0]
                 for x in y[1:]:
                     y1 = y1/x
-                return y1
+                return round(y1, rn)
 
             u1 = 'Division result: '
             print()

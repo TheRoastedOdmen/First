@@ -1,10 +1,4 @@
 
-
 Addition result: 6.0
 
-Factorial result: 
-2
-6
-24
-
-!
+Multiplication result: 5.0

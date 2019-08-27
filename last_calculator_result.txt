@@ -1,8 +1,4 @@
-!
+x
 
-Last Factorial result: 
-2
-6
-24
-
-!
+Last Multiplication result: 5.0
+x
