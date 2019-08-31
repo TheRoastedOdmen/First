@@ -1,4 +1,4 @@
-x
++
 
-Last Multiplication result: 5.0
-x
+Last Addition result: 7.247
++

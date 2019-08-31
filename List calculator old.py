@@ -22,6 +22,7 @@ while True:
             "Input '-' to substract the numbers\n"
             "Input '*' or 'x' to multiply the numbers\n"
             "Input '/' to divide the numbers\n"
+            "Inpur 'average' to find the average number\n"
             "Input '**' or '^' to exponentiation of the numbers\n"
             "Input 'y/x' to divide the one number to a list of numbers (also %)\n"
             "Input 'x/y' to divide a list of number to the one number (also %)\n"
@@ -44,13 +45,15 @@ while True:
 
 
 #Rounding module
+
         elif a == 'round' or a == 'rounding':
             print("\nYou can set the rounding number for the results\n"
                 "0 will round results to the integer,\n" 
                 "1 - to the first number after integer, e.t.c.\n"
                 "10 is by default\n")
+            print('Active rounding number is', rn, '\n' )            
             rn = int(input('Enter the rounding number: '))
-            print("Rounding number: ", rn, '\n')
+            print("New rounding number is set to ", rn, '\n')
 
             log.write('\n')
             log.write('The rounding number is set to ')
@@ -58,6 +61,7 @@ while True:
             log.write('\n')
 
             sleep(1)
+
 
 #Addition module
 
@@ -84,9 +88,9 @@ while True:
 
             u1 = 'Addition result: '
             print()
-            print('+' * (len(u1) + len(str(sum(y))) + 1), '\n')
-            print(u1, sum(y), '\n')
-            print('+' * (len(u1) + len(str(sum(y))) + 1))
+            print('+' * (len(u1) + len(str(round(sum(y), rn))) + 1), '\n')
+            print(u1, round(sum(y), rn), '\n')
+            print('+' * (len(u1) + len(str(round(sum(y), rn))) + 1))
 
             file = open('last_calculator_result.txt', "w")
             file.write('+')
@@ -258,6 +262,51 @@ while True:
 
             sleep(1) # TODO: Program has to delete x = 0 value and continue
                      #       to append(x) (same to y/x and x/y)
+
+
+#Average number Module
+
+        elif a == 'average':
+            print("\nYou have choosen the Average number\n")
+            x = float(input('Enter the number: '))
+            print(str(n) + 'st number:--->',x)
+
+            while True:
+                try:
+                    n += 1
+                    y.append(x)
+                    x = float(input('Enter the number: '))
+                    if len(y)%10 == 0 and len(y) != 10:
+                        print(str(n) + 'st number:-->',x)
+                    elif len(y)%10 == 1 and len(y) != 11:
+                        print(str(n) + 'nd number:-->',x)
+                    elif len(y)%10 == 2 and len(y) != 12:
+                        print(str(n) + 'rd number:-->',x)
+                    elif len(y) > 2:
+                        print(str(n) + 'th number:-->',x)
+                except:
+                    break
+
+            u1 = 'Average number result: '
+            print()
+            print('=' * (len(u1) + len(str(sum(y)/len(y))) + 1), '\n')
+            print(u1, (sum(y)/len(y)), '\n')
+            print('=' * (len(u1) + len(str(sum(y)/len(y))) + 1))
+
+            file = open('last_calculator_result.txt', "w")
+            file.write('=')
+            file.write('\n\nLast ')
+            file.write(str(u1))
+            file.write(str(sum(y)/len(y)))
+            file.write('\n=')
+            file.close()
+
+            log.write('\n')
+            log.write(str(u1))
+            log.write(str(sum(y)/len(y)))
+            log.write('\n')
+
+            sleep(1)
 
 
 #List calculator modules
@@ -600,3 +649,4 @@ while True:
 #modules and decorators
 #rounding
 #unknown inputs in x
+#Lambdas

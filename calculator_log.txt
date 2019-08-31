@@ -1,4 +1,0 @@
-
-Addition result: 6.0
-
-Multiplication result: 5.0
