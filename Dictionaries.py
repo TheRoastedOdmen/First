@@ -7,3 +7,4 @@ perc = {'x':1, 'y':2, 'z':3}
 for i in perc:
     print(i)
  
+print(perc[1]) 
