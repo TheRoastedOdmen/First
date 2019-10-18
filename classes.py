@@ -18,4 +18,4 @@ class Dog:
     #    print("Woof!") #not needed cuz 15 line
 
 fido = Dog("Fido", "brown","Woof!")
-print(fido.name,fido.bark)
+print(fido.name,fido.color,fido.bark)
