@@ -6,16 +6,25 @@ class Student:
         print('Hi from ' + self.name)
 
 s1 = Student('Dima')
+print()
 s1.sayhi()
 
-class Dog:
-    def __init__(self, name, color, bark):
-        self.name = name
-        self.color = color
-        self.bark = bark
+class Animal:
+    def __init__(self,name,color):
+        self.name=name
+        self.color=color
+class cat(Animal):
+    def purr(self):
+        print("Purr")
+class dog(Animal):
+    def bark(self):
+        print("Woof")
 
-    #def bark(self):
-    #    print("Woof!") #not needed cuz 15 line
-
-fido = Dog("Fido", "brown","Woof!")
-print(fido.name,fido.color,fido.bark)
+fido = dog("Fido", "brown")
+Teffi = cat("Teffi", "white")
+print()
+print(fido.name,fido.color)
+fido.bark()
+print()
+print(Teffi.name,Teffi.color)
+Teffi.purr()
