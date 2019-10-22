@@ -35,12 +35,13 @@ class Wolf:
     self.name = name
     self.color = color
 
-  def bark(self):
-    print("Grr...")
+  #def bark(self):
+    #print("Grr...")
 
 class Dog(Wolf):
   def bark(self):
     print("Woof")
+      #this will reassign last def bark
       
 husky = Dog("Max", "grey")
 print('\n', husky.name, husky.color)
