@@ -40,3 +40,11 @@ for i in f1():
 
 print()
 print(list(f1())) #prints in list
+
+
+a = 2
+b = 5
+a, b = b, a
+
+print(a)
+print(b)
