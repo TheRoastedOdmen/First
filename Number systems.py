@@ -7,5 +7,5 @@ print(z)
 
 x = 2
 print(bin(x))
-print(oct(x))
+print(oct(x)) #8
 print(hex(x))
