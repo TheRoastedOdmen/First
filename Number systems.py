@@ -12,6 +12,5 @@ print(hex(x)) #6
 
 t = int('z3f', 36)
 print(t)
-
 r = int('z3f', base = 36)
 print(r)
