@@ -9,3 +9,6 @@ x = 2
 print(bin(x))
 print(oct(x)) #8
 print(hex(x)) #6
+
+t = int('z3f', 36)
+print(t)
