@@ -50,4 +50,4 @@ print(a)
 print(b)
 
 x = 'HW'
-print(type(x)) #prints str
+print(type(x)) #prints 'str'
