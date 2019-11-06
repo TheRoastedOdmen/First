@@ -48,3 +48,6 @@ a, b = b, a
 
 print(a)
 print(b)
+
+x = 'HW'
+print(type(x)) #prints str
