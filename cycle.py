@@ -20,3 +20,16 @@ while z > 0:
     z -= 1
     print('-')
 print('stop')
+
+flag = False
+N = int(input('N: '))
+for i in range(N):
+    x = int(input('x: '))
+    flag  = (x% 10 == 0) or flag
+
+#flag = True
+#N = int(input('N: '))
+#for i in range(N):
+#    j = int(input()
+#    flag and j % 10 == 0
+#print(flag)
