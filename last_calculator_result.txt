@@ -1,4 +1,8 @@
-+
+^
 
-Last Addition result: 7.247
-+
+Last Exponentiation result: 
+9.0
+9.0
+9.0
+
+^
