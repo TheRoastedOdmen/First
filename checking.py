@@ -8,5 +8,6 @@ while x > 0:
     print()
     x //= base
     print(x)
-    
+
+print()    
 print('end')
