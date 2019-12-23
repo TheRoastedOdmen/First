@@ -14,4 +14,7 @@ elif a == 'time':
 elif a == 'random':
     print(help('random'))
 
+elif a == 'graphics':
+    print(help('graphics'))
+
 else: print('Unknown name')
