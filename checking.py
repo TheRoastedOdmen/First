@@ -1,4 +1,4 @@
-base = 7
+base = 8
 x = int(input())
 while x > 0:
     print()
