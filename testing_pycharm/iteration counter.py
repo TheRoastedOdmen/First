@@ -8,4 +8,4 @@ while x < 10:
     x += 1
 
 print("\nend of a cycle")
-
+print('i')
