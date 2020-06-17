@@ -11,6 +11,7 @@ while i < m - 1:
     i += 1
 
 print("\n\n\n")
+
 # pyramid
 n = m
 s = "    " * (n-1)
