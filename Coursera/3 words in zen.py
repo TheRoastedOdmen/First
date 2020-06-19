@@ -24,7 +24,7 @@ Namespaces are one honking great idea -- let's do more of those!"""
 
 zen_map = dict()
 
-# print(zen.split())
+print(zen.split())
 # print(len(zen.split()))
 # print(type(zen.split()))
 # i = 0  # counter
@@ -35,7 +35,7 @@ for word in zen.split():
 	zen_map[cleaned] += 1
 	# i += 1
 # print(i)  # equals len actually
-# print(zen_map)
+print(zen_map)
 
 zen_items = zen_map.items()
 print(zen_items)
