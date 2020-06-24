@@ -5,7 +5,7 @@ print(type(b"kek"))
 
 print()
 
-example_string ="привет"
+example_string = "привет"
 print(type(example_string))
 print(example_string)
 encoded_string = example_string.encode(encoding="utf-8")
