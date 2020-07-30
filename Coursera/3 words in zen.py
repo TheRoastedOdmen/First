@@ -45,9 +45,10 @@ word_count_items = sorted(
 print(word_count_items[:3])
 
 # Easier way
+print()
 
-cleaned_list = []
-for word in zen.split():
-	cleaned_list.append(word.strip('.,!-').lower())
+cleaned_list = [word.strip('.,!-').lower() for word in zen.split()]
+# for word in zen.split():
+# 	cleaned_list.append(word.strip('.,!-').lower())  # using the generator to make a list ^
 
 print(Counter(cleaned_list).most_common(5))
