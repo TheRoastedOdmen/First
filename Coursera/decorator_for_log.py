@@ -2,7 +2,7 @@ from functools import wraps as wraps
 
 
 def logger(filename):
-	def decorator(func):  # 2. Возвращается декоратор - он принимает ф-ию (в данном случае multiply_list)
+	def decorator(func):
 		@wraps(func)  # name of the func will be multiply_list
 		def wrapped(num_list):  # *args, **kwargs for unlimited arguments
 			res = func(num_list)
@@ -10,7 +10,7 @@ def logger(filename):
 				l.write(str(res))
 			return res  # Возврат основной функции, а точнее - ее результата
 		return wrapped  # 3. Декоратор возвращает новую функцию wrapped, которая подменяет multiply_list
-	return decorator
+	return decorator  # 2. Возвращается декоратор - он принимает ф-ию (в данном случае multiply_list)
 
 
 # без синтаксического сахара multiply_list = logger('new_log.txt')(multiply_list)
