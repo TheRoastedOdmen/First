@@ -1,4 +1,4 @@
-from functools import wraps as wraps
+from functools import wraps
 
 
 def logger(filename):
